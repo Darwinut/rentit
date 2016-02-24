@@ -3,6 +3,7 @@ package com.example.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -13,8 +14,8 @@ public class MaintenancePlan {
 	@GeneratedValue
 	Long Id;
 
-//	@OneToOne
-//	PlantInventoryItem plant;
+	@OneToOne
+	PlantInventoryItem plant;
 	
 //	@OneToOne
 //	PlantReservation reservation;
