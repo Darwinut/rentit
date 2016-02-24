@@ -14,7 +14,7 @@ import lombok.Value;;
 @NoArgsConstructor(force = true, access = AccessLevel.PROTECTED)
 @AllArgsConstructor(staticName = "of")
 public class BusinessPeriod {
-	LocalDate startDate;
-	LocalDate endDate;
+	LocalDate start_date;
+	LocalDate end_date;
 
 }

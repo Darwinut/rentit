@@ -2,7 +2,6 @@ package com.example.models;
 
 import java.math.BigDecimal;
 import javax.persistence.*;
-import java.time.LocalDate;
 import lombok.Data;
 
 @Entity
@@ -12,13 +11,8 @@ public class PurchaseOrder {
 	@GeneratedValue
 	Long Id;
 
-	@OneToMany
-	PlantInventoryEntry Plant;
-
-	BusinessPeriod data = new BusinessPeriod();
-
-	LocalDate issue_date;
-	LocalDate payment_schedule;
+//	@OneToMany
+//	PlantInventoryEntry Plant;
 
 	@Column(precision = 8, scale = 2)
 	BigDecimal total;
@@ -27,5 +21,5 @@ public class PurchaseOrder {
 	POStatus status;
 
 	@Embedded
-	BusinessPeriod rentalPeriod;
+	BusinessPeriod rental_period;
 }
