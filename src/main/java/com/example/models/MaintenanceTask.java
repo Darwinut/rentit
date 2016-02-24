@@ -33,6 +33,6 @@ public class MaintenanceTask {
 	BigDecimal price;
 	
 	@Embedded
-	BusinessPeriod rental_period;
+	BusinessPeriod schedule;
 	
 }

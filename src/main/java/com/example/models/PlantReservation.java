@@ -20,6 +20,6 @@ public class PlantReservation {
 	
 	
 @Embedded
-BusinessPeriod rental_period;
+BusinessPeriod schedule;
 
 }
