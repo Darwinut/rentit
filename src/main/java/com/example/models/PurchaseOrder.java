@@ -1,6 +1,8 @@
 package com.example.models;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+
 import javax.persistence.*;
 import lombok.Data;
 
@@ -11,8 +13,14 @@ public class PurchaseOrder {
 	@GeneratedValue
 	Long Id;
 
+//	@OneToOne
+//	PlantInventoryEntry plant;
+
 //	@OneToMany
-//	PlantInventoryEntry Plant;
+//	List<PlantReservation> reservations;
+		
+	 LocalDate issueDate;
+	 LocalDate paymentSchedule;
 
 	@Column(precision = 8, scale = 2)
 	BigDecimal total;
