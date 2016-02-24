@@ -9,6 +9,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -21,8 +23,11 @@ public class MaintenanceTask {
 	Long Id;
 	
 
-//	@ManyToOne
-//	MaintenancePlan maint_plan;
+	@ManyToOne
+	MaintenancePlan maint_plan;
+	
+	@OneToOne
+	PlantReservation reservation;
 
 	String description;
 	

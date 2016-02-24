@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.*;
 
 import javax.persistence.*;
 import lombok.Data;
@@ -13,11 +14,11 @@ public class PurchaseOrder {
 	@GeneratedValue
 	Long Id;
 
-//	@OneToOne
-//	PlantInventoryEntry plant;
+	@OneToOne
+	PlantInventoryEntry plant;
 
-//	@OneToMany
-//	List<PlantReservation> reservations;
+	@OneToMany
+	List<PlantReservation> reservations;
 		
 	 LocalDate issueDate;
 	 LocalDate paymentSchedule;

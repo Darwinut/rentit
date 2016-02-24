@@ -6,6 +6,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -16,15 +18,15 @@ public class PlantInventoryItem {
 	@GeneratedValue
 	Long Id;
 	
-//	@ManyToOne
-//	PlantInventoryEntry plant_info;
+	@ManyToOne
+	PlantInventoryEntry plant_info;
 
-//	@OneToOne
-//	PlantReservation reservation;
+	@OneToOne
+	PlantReservation plant_reservation;
 
 	
-//	@OneToOne
-//	MaintenancePlan maint_plan;
+	@OneToOne
+	MaintenancePlan maintenance_plan;
 
 	String serial_number;
 	
