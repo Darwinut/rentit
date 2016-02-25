@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.math.BigDecimal;
 
+import org.hibernate.annotations.Where;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.RentitApplication;
 import com.example.models.PlantInventoryEntryRepository;
+import com.mysema.query.types.expr.BooleanExpression;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
@@ -45,7 +47,39 @@ public class RentitApplicationTests {
 	public void test2() {
 		assertThat(repo.findByNameContaining("Mini").size(), is(2));
 	}
-
+	
+	
+	// Get all the available plants in the query
+	@Test
+	public void getListOfAvailablePlants() {
+		repo.findAll();
+	}
+	
+	// Get the business periods with the exact names
+	@Test
+	public void getRentalAvailabilityForRental(String name, BusinessPeriod period) {
+		repo.findAll(nameContains(name).and(isAvailableFor(period)));
+	}
+	
+	//Query the list of plants that have not been hired during the last 6 months
+	@Test
+	public void plantsNotHiredDuringSixMonth(){
+		
+	}
+	
+	//Compute the number of corrective repairs per year for the last 5 years
+	@Test
+	public void numberOfRepairsPerYear(){
+		
+	}
+	
+	//Compute the cost due to corrective repairs per year for the last 5 years
+	@Test
+	public void costOfRepairsPerYear(){
+		
+	}
+	
+	
 	// // queryDSL test
 	// // Check that there are 4 purchase orders
 	// @Test
@@ -53,12 +87,13 @@ public class RentitApplicationTests {
 	// QPurchaseOrder plant = QPurchaseOrder.purchaseOrder;
 	// assertThat(plant.count(), is(4));
 	// }
-
+	
+	QPlantInventoryEntry plant = QPlantInventoryEntry.plantInventoryEntry;
 	//
-	// // Plants containing specified name
-	// public BooleanExpression nameContains(String name) {
-	// return plant.name.contains(name);
-	// }
+	// Plants containing specified name
+	public BooleanExpression nameContains(String name) {
+		return plant.name.contains(name);
+	}
 	// // Price less than threshold
 	// public BooleanExpression priceBelow(BigDecimal threshold) {
 	// return plant.price.lt(threshold);
