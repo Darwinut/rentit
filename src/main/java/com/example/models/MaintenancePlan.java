@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.util.*;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,7 +18,7 @@ public class MaintenancePlan {
 	@GeneratedValue
 	Long Id;
 
-	@OneToMany
+	@OneToMany(cascade={CascadeType.ALL})
 	List<MaintenanceTask> tasks;
 	
 	@OneToOne
