@@ -40,20 +40,20 @@ public class RentitApplicationTests {
 		// Add an 'l' at the end as the result is in Long datatype
 		assertThat(repo.count(), is(14l));
 	}
-	
+
 	@Test
 	public void test2() {
 		assertThat(repo.findByNameContaining("Mini").size(), is(2));
 	}
-	
-	//
+
 	// // queryDSL test
-	// // Number of plants contains a substring 'Mini' and the result is 10
+	// // Check that there are 4 purchase orders
 	// @Test
 	// public void test3() {
-	// QPlantInventoryEntry plant = QPlantInventoryEntry.plantInventoryEntry;
-	// assertThat(repo.count(plant.name.contains("Mini")), is(10l));
+	// QPurchaseOrder plant = QPurchaseOrder.purchaseOrder;
+	// assertThat(plant.count(), is(4));
 	// }
+
 	//
 	// // Plants containing specified name
 	// public BooleanExpression nameContains(String name) {

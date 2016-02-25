@@ -29,3 +29,11 @@ insert into plant_inventory_entry (id, name, description, price)
 
 insert into purchase_order (id, plant_id, start_date, end_date, total)
     values (1, 2, '2016-03-22', '2016-03-24', 600);
+insert into purchase_order (id, plant_id, start_date, end_date, total)
+    values (2, 1, '2016-03-25', '2016-03-28', 600);
+insert into purchase_order (id, plant_id, start_date, end_date, total)
+    values (3, 3, '2016-04-01', '2016-04-10', 1200);
+insert into purchase_order (id, plant_id, start_date, end_date, total)
+    values (4, 4, '2016-03-15', '2016-03-17', 600);
+insert into purchase_order (id, plant_id, start_date, end_date, total)
+    values (5, 5, '2016-03-18', '2016-03-23', 600);
