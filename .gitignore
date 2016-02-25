@@ -12,3 +12,7 @@
 hs_err_pid*
 /bin/
 /target/
+
+# Ignore IntelliJ files
+.idea/
+*.iml

@@ -22,7 +22,6 @@ public class MaintenanceTask {
 	@GeneratedValue
 	Long Id;
 	
-
 	@ManyToOne
 	MaintenancePlan maint_plan;
 	

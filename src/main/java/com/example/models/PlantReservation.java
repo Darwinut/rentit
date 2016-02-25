@@ -21,7 +21,7 @@ public class PlantReservation {
 	PurchaseOrder rental;
 	
 	@OneToOne
-	MaintenanceTask maintainence_task;
+	MaintenanceTask maintenance_task;
 	
 
 	@OneToOne

@@ -252,7 +252,7 @@
   </association>  
   <association id="55">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="56" name="maintainence_task">        
+      <attribute id="56" name="maintenance_task">        
         <position height="17" width="98" x="378" y="295"/>      
       </attribute>      
       <multiplicity id="57" minimum="0" maximum="1"/>    
